@@ -1,0 +1,48 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #333; // Nền màu tối hơn để làm nổi bật
+}
+
+.display {
+  width: 80%; // Giảm chiều ngang của màn hình hiển thị
+  max-width: 300px; // Đặt giới hạn tối đa cho chiều ngang
+  background-color: #222;
+  color: #fff;
+  font-size: 2em;
+  text-align: right;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border-radius: 10px; // Bo góc cho màn hình hiển thị
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.5em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 10px; // Bo góc cho các nút bấm
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); // Thêm độ bóng cho các nút bấm
+  transition: background-color 0.3s, transform 0.2s; // Thêm hiệu ứng cho màu sắc và biến đổi
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  &:active {
+    background-color: #ddd;
+    transform: scale(0.98); // Thu nhỏ kích thước một chút khi nhấn vào
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); // Thay đổi độ bóng khi nhấn vào
+  }
+}
